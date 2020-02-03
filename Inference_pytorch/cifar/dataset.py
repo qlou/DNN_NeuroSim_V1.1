@@ -3,8 +3,8 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import os
 
-def get10(batch_size, data_root='/tmp/public_dataset/pytorch', train=True, val=True, **kwargs):
-    data_root = os.path.expanduser(os.path.join(data_root, 'cifar10-data'))
+def get10(batch_size, data_root='./data', train=True, val=True, **kwargs):
+    # data_root = os.path.expanduser(os.path.join(data_root, 'cifar10-data'))
     num_workers = kwargs.setdefault('num_workers', 1)
     kwargs.pop('input_size', None)
     print("Building CIFAR-10 data loader with {} workers".format(num_workers))
